@@ -71,5 +71,13 @@ var zodiacs = [
     description:
       "Pisces (♓︎) (/ˈpaɪsiːz/;[2][3] Ancient Greek: Ἰχθύες Ikhthyes) is the twelfth and final astrological sign in the zodiac. It is a negative, mutable sign. It spans 330° to 360° of celestial longitude. Under the tropical zodiac, the sun transits this area between February 19 and March 20.[a] In sidereal astrology, the Sun currently transits the constellation of Pisces from approximately March 12 to April 18.[4][5] In classical interpretations, the symbol of the fish is derived from the ichthyocentaurs, who aided Aphrodite when she was born from the sea.",
   },
-  
-];
+]
+
+function getData() {
+  var userSearch = document.getElementById("user-search").value.toLowerCase();
+  for (var i = 0; i < zodiacs.length; i++) {
+    if (userSearch === zodiacs[i].name) {
+      document.getElementById("text-result").innerHTML = zodiacs[i].description;
+    }
+  }
+}
